@@ -15,31 +15,12 @@
       flex-direction: column;
       min-height: 100vh;
     }
-    header {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-    nav {
-      flex-basis: 100%;
-      text-align: center;
-      margin-top: 10px;
-    }
-    nav a {
-      display: inline-block;
-      margin: 5px 10px;
-      text-decoration: none;
-      color: #333;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+
     h1 {
       text-align: center;
       margin-top: 30px;
     }
+
     .catalogue-grid {
       display: flex;
       flex-wrap: wrap;
@@ -49,26 +30,31 @@
       margin: 40px auto;
       padding: 0 20px;
     }
+
     .catalogue-item {
       width: calc(33.333% - 20px);
       box-sizing: border-box;
       text-align: center;
     }
+
     .catalogue-item img {
       width: 100%;
       max-width: 300px;
       height: auto;
     }
+
     .catalogue-item p {
       font-size: 0.9em;
       color: #444;
       margin-top: 10px;
     }
+
     @media (max-width: 768px) {
       .catalogue-item {
         width: 100%;
       }
     }
+
     footer {
       text-align: center;
       font-size: 0.8em;
@@ -79,18 +65,19 @@
   </style>
 </head>
 <body>
-  <header>
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%; max-width: 1000px; margin: auto; padding: 20px;">
-    <img src="assets/logo.png" alt="Corporate Attires Logo" style="height: 50px;">
-    <nav style="flex-basis: 100%; text-align: center; margin-top: 10px;">
-      <a href="index.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Home</a>
-      <a href="catalogue.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Catalogue</a>
-      <a href="clients.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Clients</a>
-      <a href="contact.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Contact Us</a>
-    </nav>
-  </div>
-</header>
 
+  <!-- ✅ This is the exact nav/header from index.html -->
+  <header>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; width: 100%; max-width: 1000px; margin: auto; padding: 20px;">
+      <img src="assets/logo.png" alt="Corporate Attires Logo" style="height: 50px;">
+      <nav style="flex-basis: 100%; text-align: center; margin-top: 10px;">
+        <a href="index.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Home</a>
+        <a href="catalogue.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Catalogue</a>
+        <a href="clients.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Clients</a>
+        <a href="contact.html" style="margin: 5px 10px; text-decoration: none; color: #333;">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
   <h1>Product Portfolio</h1>
   <div class="catalogue-grid">
@@ -128,14 +115,11 @@
   </div>
 
   <footer>
-  <p>
-    Corporate Attires<br>
-    40/222, Chitranjan Park, New Delhi, India - 110019<br>
-    <a href="mailto:ns@corporateattires.com">ns@corporateattires.com</a> /
-    <a href="mailto:yashraj@corporateattires.com">yashraj@corporateattires.com</a><br>
-    +91 9810294941 / +91 9818674466
-  </p>
-  <p style="margin-top: 10px;">&copy; 2025 Corporate Attires - All Rights Reserved.</p>
-</footer>
+    Corporate Attires, 40/222, Chitranjan Park, New Delhi, India - 110019<br>
+    ns@corporateattires.com / yashraj@corporateattires.com<br>
+    +91 9810294941 / +91 9818674466<br><br>
+    Copyright © 2025 Corporate Attires - All Rights Reserved.
+  </footer>
+
 </body>
 </html>
