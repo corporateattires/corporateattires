@@ -15,10 +15,6 @@
       flex-direction: column;
       min-height: 100vh;
     }
-    h1 {
-      text-align: center;
-      margin-top: 30px;
-    }
     header {
       display: flex;
       flex-wrap: wrap;
@@ -40,24 +36,38 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .catalogue {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-    .block {
+    h1 {
       text-align: center;
-      margin-bottom: 40px;
+      margin-top: 30px;
     }
-    .block img {
-      max-width: 100%;
+    .catalogue-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .catalogue-item {
+      width: calc(33.333% - 20px);
+      box-sizing: border-box;
+      text-align: center;
+    }
+    .catalogue-item img {
+      width: 100%;
+      max-width: 300px;
       height: auto;
-      width: 300px;
     }
-    .block p {
+    .catalogue-item p {
       font-size: 0.9em;
       color: #444;
       margin-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .catalogue-item {
+        width: 100%;
+      }
     }
     footer {
       text-align: center;
@@ -80,35 +90,35 @@
   </header>
 
   <h1>Product Portfolio</h1>
-  <div class="catalogue">
+  <div class="catalogue-grid">
 
-    <div class="block">
+    <div class="catalogue-item">
       <img src="assets/frontdesk.png" alt="Front Desk">
       <p>You can never redo a first impression. We know one of the first things your guests notice is the appearance of your front desk staff. Why not put them in a professional and unique uniform to compliment your image?</p>
     </div>
 
-    <div class="block">
+    <div class="catalogue-item">
       <img src="assets/concierge.png" alt="Concierge">
       <p>Give your staff that luxurious appeal with our high-quality concierge uniforms that are put together with exceptional craftsmanship to ensure both a modern and effortless style, and a long-lasting and durable attire for any situation in any shifts.</p>
     </div>
 
-    <div class="block">
+    <div class="catalogue-item">
       <img src="assets/housekeeping.png" alt="Housekeeping">
       <p>Housekeeping and hotel maid service is demanding work. We make it easy for you by outfitting your staff in comfortable but sharp looking housekeeping and maid uniforms that compliments your establishment.</p>
     </div>
 
-    <div class="block">
+    <div class="catalogue-item">
       <img src="assets/kitchenstaff.png" alt="Kitchen Staff">
       <p>Even your back of the house staff (kitchen staff and others) set the stage for a professional restaurant or hotel. We know how chefs are perfectionists so why not make them look perfect in our cool and contemporary chef apparel along with their name and your logo on their coats?</p>
     </div>
 
-    <div class="block">
-      <img src="assets/dining.png" alt="Dining Staff">
+    <div class="catalogue-item">
+      <img src="assets/dining.png" alt="Dining">
       <p>The dining experience for your guests should be just as comfortable as your hotel accommodations. Make them feel extra relaxed during their stay by dining and interacting with your restaurant staff who, of course, will greet them in a great looking uniform.</p>
     </div>
 
-    <div class="block">
-      <img src="assets/security.png" alt="Security Staff">
+    <div class="catalogue-item">
+      <img src="assets/security.png" alt="Security">
       <p>Whether you are looking for a more prominent security presence or take a more subtle approach, we have enough garments to choose from that are both functional and fashionable for your security staff.</p>
     </div>
 
