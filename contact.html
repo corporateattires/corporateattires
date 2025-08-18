@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us | Corporate Attires</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+
+    nav {
+      flex-basis: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 5px 10px;
+      text-decoration: none;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    nav a.active {
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container h1 {
+      margin-bottom: 20px;
+    }
+
+    input[type="email"] {
+      width: 80%;
+      padding: 12px;
+      font-size: 16px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 12px 25px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    #message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      input[type="email"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="assets/logo.png" alt="Corporate Attires Logo" style="height: 60px;">
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="catalogue.html">CATALOGUE</a>
+    <a href="clients.html">CLIENTS</a>
+    <a href="contact.html" class="active">CONTACT US</a>
+  </nav>
+</header>
+
+<hr>
+
+<div class="container">
+  <h1>Subscribe to Our Newsletter</h1>
+  <p>Stay updated with our latest services & announcements.</p>
+  
+  <form id="subscribeForm">
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <br>
+    <button type="submit">Subscribe</button>
+  </form>
+  
+  <div id="message"></div>
+</div>
+
+<script>
+  document.getElementById('subscribeForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const emailInput = document.getElementById('email');
+    const messageDiv = document.getElementById('message');
+
+    if (emailInput.value.trim() !== '') {
+      messageDiv.textContent = "Subscribed!";
+      emailInput.value = '';
+    } else {
+      messageDiv.textContent = "Please enter a valid email.";
+    }
+  });
+</script>
+
+</body>
+</html>
