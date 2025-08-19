@@ -11,9 +11,6 @@
       padding: 0;
       line-height: 1.6;
       background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
 
     header {
@@ -35,60 +32,57 @@
       margin: 5px 10px;
       text-decoration: none;
       color: #333;
-      transition: all 0.3s ease;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    nav a.active {
-      font-weight: bold;
-    }
-
     .container {
-      max-width: 600px;
-      margin: 60px auto;
+      max-width: 800px;
+      margin: auto;
       padding: 20px;
       text-align: center;
     }
 
-    .container h1 {
-      margin-bottom: 20px;
+    h1 {
+      margin-bottom: 10px;
     }
 
-    input[type="email"] {
-      width: 80%;
-      padding: 12px;
-      font-size: 16px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    button {
-      padding: 12px 25px;
-      background-color: #333;
-      color: white;
+    iframe {
       border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
+      width: 100%;
+      height: 400px;
+      margin: 20px 0;
     }
 
-    button:hover {
-      background-color: #555;
+    .contact-info {
+      margin-top: 40px;
+      font-size: 0.95em;
+      text-align: center;
     }
 
-    #message {
-      margin-top: 15px;
-      color: green;
-      font-weight: bold;
+    .contact-info a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 600px) {
-      input[type="email"] {
-        width: 100%;
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      .container {
+        padding: 10px;
       }
     }
   </style>
@@ -101,39 +95,28 @@
     <a href="index.html">HOME</a>
     <a href="catalogue.html">CATALOGUE</a>
     <a href="clients.html">CLIENTS</a>
-    <a href="contact.html" class="active">CONTACT US</a>
+    <a href="contact.html" style="font-weight: bold;">CONTACT US</a>
   </nav>
 </header>
 
-<hr>
-
 <div class="container">
   <h1>Subscribe to Our Newsletter</h1>
-  <p>Stay updated with our latest services & announcements.</p>
-  
-  <form id="subscribeForm">
-    <input type="email" id="email" placeholder="Enter your email" required>
-    <br>
-    <button type="submit">Subscribe</button>
-  </form>
-  
-  <div id="message"></div>
+  <p>Stay updated with our latest collections & announcements.</p>
+
+  <!-- Replace with your Zoho Form Embed URL -->
+  <iframe src="https://forms.zohopublic.in/YOUR_FORM_URL" allowtransparency="true"></iframe>
+
+  <div class="contact-info">
+    <h2>Contact Us</h2>
+    <p>
+      Corporate Attires<br>
+      40/222, Chitranjan Park, New Delhi, India - 110019<br>
+      <a href="mailto:ns@corporateattires.com">ns@corporateattires.com</a> /
+      <a href="mailto:yashraj@corporateattires.com">yashraj@corporateattires.com</a><br>
+      +91 9810294941 / +91 9818674466
+    </p>
+  </div>
 </div>
-
-<script>
-  document.getElementById('subscribeForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const emailInput = document.getElementById('email');
-    const messageDiv = document.getElementById('message');
-
-    if (emailInput.value.trim() !== '') {
-      messageDiv.textContent = "Subscribed!";
-      emailInput.value = '';
-    } else {
-      messageDiv.textContent = "Please enter a valid email.";
-    }
-  });
-</script>
 
 </body>
 </html>
